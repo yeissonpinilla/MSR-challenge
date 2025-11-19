@@ -13,6 +13,6 @@ class GPTManager:
     def prompt(self, input_text):
         response = self.client.responses.create(
             model = "gpt-5-nano",
-            input = "this is a test, am I using my credits?",
+            input = input_text,
         )
         return response.json()
